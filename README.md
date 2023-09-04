@@ -23,7 +23,7 @@ A static URL shortener runs on Github Page.
 1. Clone this repo
 2. Config URLS in `config.json`. Syntax below
 3. Run `python main.py`, the relevant HTML files will be generated
-4. Push & deploy to Github Page
+4. Push & deploy to [Github Page](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
 5. User access a HTML file, get redirected to the desired URL using `<meta http-equiv="refresh" />`
 
 **Config file structure**
@@ -66,18 +66,6 @@ Any contributions you make are greatly appreciated.
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-
-<!-- CONTACT -->
-## Contact
-
-Email:
-
-Project Link: 
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
