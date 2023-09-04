@@ -1,10 +1,15 @@
 {
   "urls": {
-    "path1": "https://example.com",
-    "path2": "https://example.com/path2",
-    "parent-path": {
-      "child1": "https://example.com/1",
-      "child2": "https://example.com/2"
-    }
+    "q": "https://dthung1602.github.io/sqss",
+    "qg": "https://github.com/dthung1602/sqss",
+    "m": "https://manga--bookmark.appspot.com",
+    "mg": "https://github.com/dthung1602/MangaBookmark",
+    "i": "https://registry.terraform.io/providers/dthung1602/instant-proxy",
+    "ig": "https://github.com/dthung1602/terraform-provider-instant-proxy",
+    "sg": "https://github.com/dthung1602/the-spamminator",
+    "sc": "https://chrome.google.com/webstore/detail/thespamminator/dnpihknfmkmoldifndaajhcceejniabd",
+    "sf": "https://addons.mozilla.org/en-US/firefox/addon/thespamminator/",
+    "bg": "https://github.com/dthung1602/bert-relation-extraction",
+    "bk": "https://www.kaggle.com/duongthanhhung/bert-relation-extraction"
   }
 }

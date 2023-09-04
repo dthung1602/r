@@ -21,7 +21,7 @@ def main():
     index_body = ""
 
     for original_path, url in urls.items():
-        path = os.path.join(OUTPUT_DIR, original_path) + ".html"
+        path = os.path.join(OUTPUT_DIR, original_path) + ".htm"
         directory, _ = path.rsplit("/", 1)
 
         print(f"Generating {path}")
