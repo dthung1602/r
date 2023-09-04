@@ -7,9 +7,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-    <img src="logo.png" alt="logo" width="300">
+    <img src="logo.png" alt="logo" width="150">
     <br/>
-    <small><i>A static URL shortener runs on Github Page</i></small>
     <br/>
 </p>
 
@@ -23,7 +22,7 @@ A static URL shortener runs on Github Page.
 1. Clone this repo
 2. Config URLS in `config.json`. Syntax below
 3. Run `python main.py`, the relevant HTML files will be generated
-4. Push & deploy to [Github Page](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
+4. Add those files, commit, push & deploy to [Github Page](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
 5. User access a HTML file, get redirected to the desired URL using `<meta http-equiv="refresh" />`
 
 **Config file structure**
