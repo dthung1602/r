@@ -6,6 +6,30 @@ BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 CONFIG_FILE = os.path.join(BASE_DIR, "config.json")
 OUTPUT_DIR = os.path.join(BASE_DIR, "docs")
 INDEX_FILE = os.path.join(OUTPUT_DIR, "index.html")
+INDEX_TEMPLATE_FILE = os.path.join(BASE_DIR, "index-template.html")
+
+HTML_TEMPLATE = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="refresh" content="0; url={url}">
+</head>
+<body></body>
+</html>
+"""
+
+LINK_TEMPLATE = """
+<tr>
+    <td>
+        <button onclick="copy(this)">Copy</button>
+        <a href="{path}">{path}</a>
+    </td>
+    <td>
+        <button onclick="copy(this)">Copy</button>
+        <a href="{url}">{url}</a>
+    </td>
+</tr>
+"""
 
 
 def main():
@@ -31,44 +55,15 @@ def main():
         with open(path, "w") as f:
             f.write(html_str)
 
-        index_body += LINK_TEMPLATE.format(url=url, path=original_path)
+        index_body += LINK_TEMPLATE.format(url=url, path=original_path + ".htm")
 
     print("Generating index.html")
+    with open(INDEX_TEMPLATE_FILE) as f:
+        index_template = f.read()
     with open(INDEX_FILE, "w") as f:
-        f.write(INDEX_TEMPLATE.format(body=index_body))
+        f.write(index_template % {"body": index_body})
 
     print("Done!\n")
-
-
-HTML_TEMPLATE = """
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta http-equiv="refresh" content="0; url={url}">
-</head>
-<body></body>
-</html>
-"""
-
-INDEX_TEMPLATE = """
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>URL list</title>
-</head>
-<body>
-<h2>URL list</h2>
-<ul>
-{body}
-</ul>
-</body>
-</html>
-"""
-
-LINK_TEMPLATE = """
-<li><a href="{url}">{path} --> {url}</a></li>
-"""
 
 
 def flatten_dict(d: dict, parent_key: str = "", sep: str = "/") -> dict:

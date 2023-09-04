@@ -1,36 +1,188 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>URL list</title>
+    <title>URL LIST</title>
+    <style>
+        html {
+            font-family: sans-serif;
+            padding: 16px;
+        }
+
+        td {
+            padding: 8px;
+        }
+
+        td:first-child {
+            min-width: 200px;
+        }
+
+        button {
+            margin-right: 6px;
+        }
+
+        th {
+            text-align: left;
+            padding: 8px 4px;
+        }
+
+        .copy {
+            visibility: hidden;
+            color: green;
+            font-weight: bold;
+            padding: 8px 8px 20px;
+        }
+
+        .copy.success {
+            visibility: visible;
+        }
+    </style>
+    <script>
+        let timeoutHandler = null
+        function copy(btn) {
+            navigator.clipboard.writeText(btn.nextElementSibling.href)
+            const noti = document.getElementsByClassName("copy")[0]
+            noti.classList.add("success")
+            const handler = setTimeout(() => noti.classList.remove("success"), 1500)
+            clearTimeout(timeoutHandler)
+            timeoutHandler = handler
+        }
+    </script>
 </head>
 <body>
 <h2>URL list</h2>
-<ul>
+<span class="copy">Copied to clipboard!</span>
+<table>
+    <thead>
+    <tr>
+        <th>Shorten URLs</th>
+        <th>Full URLs</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+<tr>
+    <td>
+        <button onclick="copy(this)">Copy</button>
+        <a href="q.htm">q.htm</a>
+    </td>
+    <td>
+        <button onclick="copy(this)">Copy</button>
+        <a href="https://dthung1602.github.io/sqss">https://dthung1602.github.io/sqss</a>
+    </td>
+</tr>
 
-<li><a href="https://dthung1602.github.io/sqss">q --> https://dthung1602.github.io/sqss</a></li>
+<tr>
+    <td>
+        <button onclick="copy(this)">Copy</button>
+        <a href="qg.htm">qg.htm</a>
+    </td>
+    <td>
+        <button onclick="copy(this)">Copy</button>
+        <a href="https://github.com/dthung1602/sqss">https://github.com/dthung1602/sqss</a>
+    </td>
+</tr>
 
-<li><a href="https://github.com/dthung1602/sqss">qg --> https://github.com/dthung1602/sqss</a></li>
+<tr>
+    <td>
+        <button onclick="copy(this)">Copy</button>
+        <a href="m.htm">m.htm</a>
+    </td>
+    <td>
+        <button onclick="copy(this)">Copy</button>
+        <a href="https://manga--bookmark.appspot.com">https://manga--bookmark.appspot.com</a>
+    </td>
+</tr>
 
-<li><a href="https://manga--bookmark.appspot.com">m --> https://manga--bookmark.appspot.com</a></li>
+<tr>
+    <td>
+        <button onclick="copy(this)">Copy</button>
+        <a href="mg.htm">mg.htm</a>
+    </td>
+    <td>
+        <button onclick="copy(this)">Copy</button>
+        <a href="https://github.com/dthung1602/MangaBookmark">https://github.com/dthung1602/MangaBookmark</a>
+    </td>
+</tr>
 
-<li><a href="https://github.com/dthung1602/MangaBookmark">mg --> https://github.com/dthung1602/MangaBookmark</a></li>
+<tr>
+    <td>
+        <button onclick="copy(this)">Copy</button>
+        <a href="i.htm">i.htm</a>
+    </td>
+    <td>
+        <button onclick="copy(this)">Copy</button>
+        <a href="https://registry.terraform.io/providers/dthung1602/instant-proxy">https://registry.terraform.io/providers/dthung1602/instant-proxy</a>
+    </td>
+</tr>
 
-<li><a href="https://registry.terraform.io/providers/dthung1602/instant-proxy">i --> https://registry.terraform.io/providers/dthung1602/instant-proxy</a></li>
+<tr>
+    <td>
+        <button onclick="copy(this)">Copy</button>
+        <a href="ig.htm">ig.htm</a>
+    </td>
+    <td>
+        <button onclick="copy(this)">Copy</button>
+        <a href="https://github.com/dthung1602/terraform-provider-instant-proxy">https://github.com/dthung1602/terraform-provider-instant-proxy</a>
+    </td>
+</tr>
 
-<li><a href="https://github.com/dthung1602/terraform-provider-instant-proxy">ig --> https://github.com/dthung1602/terraform-provider-instant-proxy</a></li>
+<tr>
+    <td>
+        <button onclick="copy(this)">Copy</button>
+        <a href="sg.htm">sg.htm</a>
+    </td>
+    <td>
+        <button onclick="copy(this)">Copy</button>
+        <a href="https://github.com/dthung1602/the-spamminator">https://github.com/dthung1602/the-spamminator</a>
+    </td>
+</tr>
 
-<li><a href="https://github.com/dthung1602/the-spamminator">sg --> https://github.com/dthung1602/the-spamminator</a></li>
+<tr>
+    <td>
+        <button onclick="copy(this)">Copy</button>
+        <a href="sc.htm">sc.htm</a>
+    </td>
+    <td>
+        <button onclick="copy(this)">Copy</button>
+        <a href="https://chrome.google.com/webstore/detail/thespamminator/dnpihknfmkmoldifndaajhcceejniabd">https://chrome.google.com/webstore/detail/thespamminator/dnpihknfmkmoldifndaajhcceejniabd</a>
+    </td>
+</tr>
 
-<li><a href="https://chrome.google.com/webstore/detail/thespamminator/dnpihknfmkmoldifndaajhcceejniabd">sc --> https://chrome.google.com/webstore/detail/thespamminator/dnpihknfmkmoldifndaajhcceejniabd</a></li>
+<tr>
+    <td>
+        <button onclick="copy(this)">Copy</button>
+        <a href="sf.htm">sf.htm</a>
+    </td>
+    <td>
+        <button onclick="copy(this)">Copy</button>
+        <a href="https://addons.mozilla.org/en-US/firefox/addon/thespamminator/">https://addons.mozilla.org/en-US/firefox/addon/thespamminator/</a>
+    </td>
+</tr>
 
-<li><a href="https://addons.mozilla.org/en-US/firefox/addon/thespamminator/">sf --> https://addons.mozilla.org/en-US/firefox/addon/thespamminator/</a></li>
+<tr>
+    <td>
+        <button onclick="copy(this)">Copy</button>
+        <a href="bg.htm">bg.htm</a>
+    </td>
+    <td>
+        <button onclick="copy(this)">Copy</button>
+        <a href="https://github.com/dthung1602/bert-relation-extraction">https://github.com/dthung1602/bert-relation-extraction</a>
+    </td>
+</tr>
 
-<li><a href="https://github.com/dthung1602/bert-relation-extraction">bg --> https://github.com/dthung1602/bert-relation-extraction</a></li>
+<tr>
+    <td>
+        <button onclick="copy(this)">Copy</button>
+        <a href="bk.htm">bk.htm</a>
+    </td>
+    <td>
+        <button onclick="copy(this)">Copy</button>
+        <a href="https://www.kaggle.com/duongthanhhung/bert-relation-extraction">https://www.kaggle.com/duongthanhhung/bert-relation-extraction</a>
+    </td>
+</tr>
 
-<li><a href="https://www.kaggle.com/duongthanhhung/bert-relation-extraction">bk --> https://www.kaggle.com/duongthanhhung/bert-relation-extraction</a></li>
-
-</ul>
+    </tbody>
+</table>
 </body>
 </html>

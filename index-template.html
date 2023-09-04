@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>URL LIST</title>
+    <style>
+        html {
+            font-family: sans-serif;
+            padding: 16px;
+        }
+
+        td {
+            padding: 8px;
+        }
+
+        td:first-child {
+            min-width: 200px;
+        }
+
+        button {
+            margin-right: 6px;
+        }
+
+        th {
+            text-align: left;
+            padding: 8px 4px;
+        }
+
+        .copy {
+            visibility: hidden;
+            color: green;
+            font-weight: bold;
+            padding: 8px 8px 20px;
+        }
+
+        .copy.success {
+            visibility: visible;
+        }
+    </style>
+    <script>
+        let timeoutHandler = null
+        function copy(btn) {
+            navigator.clipboard.writeText(btn.nextElementSibling.href)
+            const noti = document.getElementsByClassName("copy")[0]
+            noti.classList.add("success")
+            const handler = setTimeout(() => noti.classList.remove("success"), 1500)
+            clearTimeout(timeoutHandler)
+            timeoutHandler = handler
+        }
+    </script>
+</head>
+<body>
+<h2>URL list</h2>
+<span class="copy">Copied to clipboard!</span>
+<table>
+    <thead>
+    <tr>
+        <th>Shorten URLs</th>
+        <th>Full URLs</th>
+    </tr>
+    </thead>
+    <tbody>
+    %(body)s
+    </tbody>
+</table>
+</body>
+</html>
