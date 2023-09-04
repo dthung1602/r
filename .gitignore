@@ -1,0 +1,11 @@
+### IDEs
+.idea
+.vscode
+
+### Temp files
+foo*
+
+### Python
+__pycache__/
+*.py[cod]
+*$py.class

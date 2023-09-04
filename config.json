@@ -1,0 +1,10 @@
+{
+  "urls": {
+    "path1": "https://example.com",
+    "path2": "https://example.com/path2",
+    "parent-path": {
+      "child1": "https://example.com/1",
+      "child2": "https://example.com/2"
+    }
+  }
+}
